@@ -1,0 +1,1287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Nihil">
+  <meta name="description" content="A Portfolio of Banele Zulu [Nihil]">
+  <meta name="keywords" content="portfolio, Personal web site, Personal web page">
+  <meta http-equiv="refresh" content="100000">
+  <title>Personal Portfolio</title>
+  <link rel="icon" type="image/x-icon" href="Images/logo_2.jpeg">
+  <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="Animated_cards.css" />
+  <link rel="stylesheet" href="Mentor_stylesheet.css" />
+  <link rel="stylesheet" href="Portfolio_stylesheet.css">
+  <link rel="stylesheet" href="MyProject_stylesheet.css">
+  <link rel="stylesheet" href="Contact_stylesheet.css">
+  <link rel="stylesheet" href="Footer_stylesheet.css">
+
+  <!-- ** FIXME:  these below might need to go -->
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner:wght@400;500;600;700&family=Lobster&family=Oswald:wght@200;300;600&family=Playpen+Sans:wght@100;200;300&family=Roboto:ital,wght@0,100;1,300;1,500&display=swap"
+    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1+Code:wght@100..700&display=swap" rel="stylesheet">
+  <script src="Portfolio.js"></script>
+</head>
+
+<!-- **FOR EASY READING I'LL USE THE EXTENSION --TODO HIGHLIGHT-- TO INDICATE COMMENTS ** -->
+
+
+<body>
+  <!--  **BACKGROUND COLOR CONTROL CODE, changes the pages theme to the liking of the user-->
+  <form class="color-picker" action="">
+    <fieldset>
+      <legend class="visually-hidden">Pick a color scheme</legend>
+      <label for="light" class="visually-hidden">Light</label>
+      <input type="radio" name="theme" id="light" title="Light Theme Mode" checked>
+
+      <label for="pink" class="visually-hidden">Pink theme</label>
+      <input type="radio" id="pink" name="theme" title="Pink theme Mode">
+
+      <label for="blue" class="visually-hidden">Blue theme</label>
+      <input type="radio" id="blue" name="theme" title="Blue Theme Mode">
+
+      <label for="green" class="visually-hidden">Green theme</label>
+      <input type="radio" id="green" name="theme" title="Green Theme Mode">
+
+      <label for="dark" class="visually-hidden">Dark theme</label>
+      <input type="radio" id="dark" name="theme" title="Dark Theme Mode">
+    </fieldset>
+  </form>
+  <!-- **END BACKGROUND COLOR CONTROL -->
+
+  <!--** Mobile Navigation  -->
+  <nav>
+    <ul id="mobile_nav">
+      <li> <a href="#home" class="fa fa-solid fa-home"><i> HOME </i> </a> </li>
+      <li> <a href="#about" class="fa fa-solid fa-user"><i> ABOUT</i> </a> </li>
+      <li> <a href="#portfolio" class="fa fa-solid fa-briefcase"><i> PORTFOLIO</i> </a> </li>
+      <li> <a href="#myProjects" class="fa fa-solid fa-diagram-project"><i> PROJECTS</i> </a> </li>
+      <li> <a href="#contacts" class="fa fa-solid fa-envelope"><i> CONTACT</i> </a> </li>
+    </ul>
+  </nav>
+
+  <main>
+    <nav>
+      <aside class="navbar" id="navbar">
+        <ul class="nav">
+          <li> <a href="#home" class="fa fa-solid fa-home"><i> HOME </i> </a> </li>
+          <li> <a href="#about" class="fa fa-solid fa-user"><i> ABOUT</i> </a> </li>
+          <li> <a href="#portfolio" class="fa fa-solid fa-briefcase"><i> PORTFOLIO</i> </a> </li>
+          <li> <a href="#myProjects" class="fa fa-solid fa-diagram-project"><i> PROJECTS</i> </a> </li>
+          <li> <a href="#contacts" class="fa fa-solid fa-envelope"><i> CONTACT</i> </a> </li>
+        </ul>
+      </aside>
+
+      <div class="social_media">
+        <a href="https://www.linkedin.com/in/banele-zulu-000000100/" target="_blank" rel="noopener">
+          <i class="fa fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/Nihil" target="_blank" rel="noopener">
+          <i class="fa fa-github"></i>
+        </a>
+        <a href="https://www.whatsapp.com" target="_blank" rel="noopener">
+          <i class="fa fa-whatsapp"></i>
+        </a>
+        <a href="tel:+27 7* **** **4" target="_blank" rel="noopener" title="Need me? Call here."><i
+            class="fa-solid fa-phone"></i>
+        </a>
+      </div>
+    </nav>
+
+    <!--//** Document body.  -->
+    <main class="content">
+      <!--** Logo image and humbugger menu for navigation control. The nav icon must be responsive and change according to the state of the nav bar-->
+      <header>
+        <img src="Images/logo_1.jpeg" alt="nihil logo" title="Nihil Logo">
+        <ul>
+          <li id="bars_icon" class="fa fa-solid fa-bars"></li>
+        </ul>
+      </header>
+
+      <!-- ** Home section. No picture of myself THAT NOT HAPPENING, nav bar, and some basic home functionality-->
+      <section id="home">
+        <!-- ** HOME PAGE design, i'm tryna make a unique design the capture the user at first glance. 
+            And hopefully is User friendly. REMEMBER KISS PRINCIPLE-->
+        <video src="Videos/background_video.mp4" autoplay loop muted type="mp4/video"></video>
+        <img src="Images/mask.jpg" alt="paint brash stroke" class="brash_stroke">
+        <div>
+          <!-- ** Basic info about myself-->
+          <h3>Hi there </h3>
+          <h1>I'm <span>Banele Zulu</span>.</h1>
+          <!-- ** This is a modern design using Typed js object for auto typing-->
+          <p>A dedicated <strong class="auto_typed">Software Developer</strong>.</p>
+        </div>
+        <!-- ** Script source to the auto-type script-->
+        <script src="hhtps://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+      </section>
+
+      <!--** This is the about section. I think this is the section i'll most dislike. Like who wanna talk about themselves??? -->
+      <section id="about">
+        <h1>About Me</h1>
+        <div class="divider"></div>
+        <!--** A sort of introduction to myself. NEVER BEEN GOOD AT TALKING ABOUT MYSELF -->
+        <p>Hello good people my name is Bane Zulu, an aspiring developer from <i>South Africa</i>. I'm a fellow
+          developer dedicated to solving tomorrows problems today. A great developer once said <q>One code at a
+            time</q>, with consistency and perseverance we all can be great and achieve are dreams and goals.
+          I'm a 3<sup>rd</sup> year student at <a href="https://www.mut.ac.za/" target="_blank" rel="noopener"
+            title="Mangosuthu University of Technology.."> <abbr
+              title="Mangosuthu University of Technology"><strong>MUT</strong></abbr></a>.
+          I have a deep passion for coding and a dream to innovate. My journey in development began with my first
+          <strong>Hello, World!</strong>
+          and has since evolved into a quest to build solutions that matter. Curiosity is my compass; it leads me to
+          constantly explore new technologies and frameworks. Whether it's front-end aesthetics or back-end logic, I
+          love the thrill of turning ideas into reality through code. As an aspiring developer, I'm not just chasing a
+          degree; I'm chasing excellence. I believe in learning by doing, which is why you'll often find me engaged in
+          hands-on projects or learning from the various online courses to find problems and provide solutions. <br>
+          I'm excited about the future and the role I can play in shaping it with technology. Let's code a better
+          tomorrow
+          together! <br>
+          'I'm
+          available for
+          work.For information about my projects you can visit my git-hub repository to see all my projects on
+          <a href="https://github.com/" target="_blank" rel="noopener" title="Link to my github repo.."><i
+              class="fa fa-solid fa-github"></i></a>.
+        </p>
+        <!-- ** I choose the fieldset because of the legend tag, to add the heading of the container. This will house the responsive radio-buttons holding images of my family-->
+        <fieldset class="family_content" id="fam">
+          <legend>My Siblings</legend>
+          <div class="container">
+            <!-- ** This card is for my very special nephew KUKHANYA -->
+            <input type="radio" name="slide" id="c1" checked>
+            <label for="c1" class="card">
+              <div class="card-row">
+                <div class="icon">1</div>
+                <div class="description">
+                  <h4>Kukhanya <span style="color: #03a9f4;">Light</span></h4>
+                  <p>29 June 2023 13:58:26, Home.</p>
+                </div>
+              </div>
+            </label>
+            <!-- ** This card is for my very special niece ASAMI -->
+            <input type="radio" name="slide" id="c2">
+            <label for="c2" class="card">
+              <div class="card-row">
+                <div class="icon">2</div>
+                <div class="description">
+                  <h4>Asami <span style="color: rgba(254, 40, 162, 90%);">Sammy</span></h4>
+                  <p>18 September 2022, 17:32:39 Isiphingo Ramdus Road 6.</p>
+                </div>
+              </div>
+            </label>
+            <!-- ** This card is for oldest brother LUNGANI -->
+            <input type="radio" name="slide" id="c3">
+            <label for="c3" class="card">
+              <div class="card-row">
+                <div class="icon">3</div>
+                <div class="description">
+                  <h4>Lungani</h4>
+                  <p>08 October 2022 14:00:04, &#64; Durban, South Beach.</p>
+                </div>
+              </div>
+            </label>
+            <!-- ** This card is for sisters fathers kids, and herself NONTANDO -->
+            <input type="radio" name="slide" id="c4">
+            <label for="c4" class="card">
+              <div class="card-row">
+                <div class="icon">4</div>
+                <div class="description">
+                  <h4>Ntuthuko<span style="color: rgba(254, 40, 162, 90%);">&</span> Nontando</h4>
+                  <p>18 September 2022, 17:32:39 Isiphingo Ramdus Road 6</p>
+                </div>
+              </div>
+            </label>
+            <!-- ** This card is for my youngest brother BOY -->
+            <input type="radio" name="slide" id="c5">
+            <label for="c5" class="card">
+              <div class="card-row">
+                <div class="icon">5</div>
+                <div class="description">
+                  <h4>Nkosingthandile</h4>
+                  <p>11 April 2021 &#64; <i>Chief Luthayi High School</i>.</p>
+                </div>
+              </div>
+            </label>
+            <!-- ** This card is for my mid-brother ZO -->
+            <input type="radio" name="slide" id="c6">
+            <label for="c6" class="card">
+              <div class="card-row">
+                <div class="icon">5</div>
+                <div class="description">
+                  <h4>Sanele</h4>
+                  <p>2023 March, 2023 &#64; a night out.</p>
+                </div>
+              </div>
+            </label>
+          </div>
+        </fieldset>
+
+        <!-- ** This section discuss 'kind personal' details about me, such as skills i possess, achievements, goals, and education history.   -->
+        <article id="dive">
+          <h2 class="sub_heading">A History Dive</h2>
+          <!-- **  This is to be a responsive grid display of cards containing relevant information -->
+          <section class="auto-grid">
+            <div class="card">
+              <!-- **  The education card will hold my academic history, primarily schools i attended growing up-->
+              <h3 class="card__title">Education</h3>
+              <ol>
+                <li>Emaxulwini Primary School.</li>
+                <li>Chief Luthayi Hight School</li>
+                <li>Mangosuthu University of Technology</li>
+              </ol>
+            </div>
+            <div class="card">
+              <!-- ** This card will hold my skills, interests, and hobbies -->
+              <h3 class="card__title">Skills, Interests &amp; Hobbies</h3>
+              <ul>
+                <li>Programming.</li>
+                <li>Drawing.</li>
+                <li>Playing and Watching Soccer.</li>
+                <li>Reading &amp; Writing.</li>
+                <li>Learning to speak another language.</li>
+                <li>Psychology [Understanding of Human Behavior].</li>
+                <li>Educational Podcasts.</li>
+              </ul>
+            </div>
+            <div class="card">
+              <h3 class="card__title">Goals</h3>
+              <!-- ** this here are my goals -->
+              <p>
+                My biggest goal has always been to be as competent as could in my personal, academic, and work life
+                thus, i could be a provide for my family and all people close to me.
+              </p>
+            </div>
+            <div class="card">
+              <!-- **  This card contain a list of my personal achievement-->
+              <h3 class="card__title">achievements</h3>
+              <ol>
+                <li>Metric</li>
+                <li>First Desktop Application</li>
+                <li>Completing my C# Game Store App</li>
+                <li>Mastering Java, and java Swing</li>
+              </ol>
+            </div>
+            <div class="card">
+              <!-- **  My work exp-->
+              <h3 class="card__title">Work Experience</h3>
+              <p>I don't have any work experience.</p>
+            </div>
+            <div class="card">
+              <!-- **  This card holds professionally recognized certificates-->
+              <h3 class="card__title">Certificates</h3>
+              <ol>
+                <li>Certificate of Excellence in Hight School</li>
+                <li>Introduction to Java Programming. <strong><a href="https://www.coursera.com" target="_blank"
+                      rel="noopener">Coursera</a></strong></li>
+                <li>Java Programming. <strong><a href="https://www.sololearn.com/en/" target="_blank"
+                      rel="noopener">Sololearn</a></strong></li>
+              </ol>
+            </div>
+          </section>
+        </article>
+
+        <section id="grow">
+          <!-- ** This is my journey in developing as a developer and all the things i learned along the way -->
+          <h1 style="text-align: center; font-size: 30px; text-decoration: underline; font-variant: small-caps;">
+            Personal Growth Journey.</h1>
+          <h2 class="sub_heading">My Mentors</h2>
+          <!-- TODO:  Don't know if this is relevant but i'll include it for now -->
+          <p>
+            In this section, I will endeavor on my learning journey from being a complete newbie to where I am today in
+            the software
+            development world. Since registering in 2022, the goal was to reach my full potential and be the best I can
+            be in
+            developing software. Like every journey, I too encountered my fair share of obstacles, from not receiving my
+            student
+            allowance for <strong>9 months</strong>. During that time, I had to go to campus to study, practice, and
+            develop myself to
+            ensure I
+            didn't fall behind in class. Looking back now, even back then, that was kind of <i>a blessing in
+              disguise</i>
+            because of the
+            great people I met during this time. <br>
+            This section will cover all these heroes and how they helped me overcome and grow from these hard times.
+          </p>
+          <!-- ** The mentor CSS code is in a separate file from the main CSS doc.[Mentor_stylesheet.css] -->
+          <article class="mentor_section" id="mentors">
+
+            <section class="mentor-section-row">
+              <!--** Mentor 1 -->
+              <div class="mentor_box">
+                <div class="mentor-img">
+                  <img src="Images_mentorship/Images/mentor.jpg" alt="image of mentor 2">
+                </div>
+                <div class="mentor-info">
+                  <h3><span>Ntobeko</span> Ndidi</h3>
+                  <p>
+                    Ntobeko is a by far the best software developer i know in this field i'm in. That is
+                    subjective though, reason being, i know very little people doing it, but during our time as
+                    mentor-mentee he was able to help and actually solve any and all problems a came to him with.
+                    That has always amazed me.
+                    He helped me buy the pc i've created all my apps. He actually approached me the first day we meet
+                    and asked me <q>Are you doing IT?</q>, he than than welcomed me to the field and gave me the
+                    <i>Absolute Java</i> text book. And since than he took me under he's wing nd showed me how things
+                    are done.<br>
+                    One of my goals while here is to be a Ntobeko to someone else.
+                  </p>
+                  <h4><span>What now<i>?</i></span>: Working as a professional Software Developer.</h4>
+                </div>
+                <h4>1<sup>st</sup> Mentor</h4>
+              </div>
+
+              <!--** PROJECT 2 -->
+              <div class="mentor_box">
+                <div class="mentor-img">
+                  <img src="Images_mentorship/Images/mentor.jpg" alt="image of mentor 2">
+                </div>
+                <div class="mentor-info">
+                  <h3><span>Smiso</span> Lenslot</h3>
+                  <p>
+                    Smiso was another very important person who helped me develop and forced me to find new angles in
+                    solving problems. He was very good in Java.
+                    He gave me all his first year programs and i still have them to this day save in a folder named
+                    after him. These much of them that i have'nt been able to work all of them.
+                    <br>
+                    He was very very helpful and attended everyday even on weekends, so he was there everyday of the
+                    week to help.
+                  </p>
+                  <h4><span>What now<i>?</i></span>: Working as a professional Software Developer.</h4>
+                </div>
+                <h4>2<sup>nd</sup> Mentor</h4>
+              </div>
+
+              <!--** Mentor 3-->
+              <div class="mentor_box">
+                <div class="mentor-img">
+                  <img src="Images_mentorship/Images/mentor.jpg" alt="image of mentor 2">
+                </div>
+                <div class="mentor-info">
+                  <h3><span>Mvelo</span> Levi</h3>
+                  <p>
+                    Mvelo was technically a tutor for <abbr title="Information and Communication Technology">ICT</abbr>,
+                    but he often went above an beyond especially in helping me with my financial(allowance) issues
+                    during that time. He was doing <strong>Network Communication</strong> hence, he wasn't really able
+                    to help me since i had heave decided that i was going or programming (Software Development).
+                  </p>
+                  <h4><span>What now<i>?</i></span>: Working in the industry.</h4>
+                </div>
+                <h4>3<sup>rd</sup> Mentor</h4>
+              </div>
+
+              <!--** Mentor 4 -->
+              <div class="mentor_box">
+                <div class="mentor-img">
+                  <img src="Images_mentorship/Images/mentor.jpg" alt="image of mentor 2">
+                </div>
+                <div class="mentor-info">
+                  <h3><span>Mthunzi</span> Cele</h3>
+                  <p>
+                    Mthunzi is a few years older then me but was and is very still to this day a very significant part
+                    of my development. He is a year ahead of me when i was doing 1<sup>st</sup> year he was doing his
+                    2<sup>nd</sup>year.
+                    As of today <i>10 April, 2024 23:41</i> creating this portfolio he is doing his inservice learning
+                    in <abbr title="Mangosuthu University of Technology">MUT</abbr>
+                    The relationship between him and i is unique because he is not just a mentor but
+                    almost like an older brother. From first year he has given me learning material to prepare for
+                    the following year.
+                  </p>
+                  <h4><span>What now<i>?</i></span>: Inservice Training &#64; MUT.</h4>
+                </div>
+                <h4>4<sup>th</sup> Mentor</h4>
+              </div>
+
+              <!--** Mentor 5 -->
+              <div class="mentor_box">
+                <div class="mentor-img">
+                  <img src="Images_mentorship/Images/mentor.jpg" alt="image of mentor 2">
+                </div>
+                <div class="mentor-info">
+                  <h3><span>Sbusiso</span></h3>
+                  <p>
+                    Sbusiso is a close friend of <i>Smiso</i> , they were always around, he would often check up on
+                    what i'm
+                    doing and give me pointers here and there.
+                  </p>
+                  <h4><span>What now<i>?</i></span>: Working as a professional Software Developer.</h4>
+                </div>
+                <h4>5<sup>th</sup> Mentor</h4>
+              </div>
+
+              <!--** Mentor 6-->
+              <div class="mentor_box">
+                <div class="mentor-img">
+                  <img src="Images_mentorship/Images/mentor.jpg" alt="image of mentor 2">
+                </div>
+                <div class="mentor-info">
+                  <h3><span>Bayanda</span> &amp; <span>Nkoskhona</span></h3>
+                  <p>
+                    Both Bayanda and Nkoskhona are friends with <i>Smiso &amp; Sbusiso</i> they were actually working
+                    together on a group, hence the would also put me under their wing and showing way to do things
+                    correctly.
+                  </p>
+                  <h4><span>What now<i>?</i></span>: both are doing their Advanced Diploma's.</h4>
+                </div>
+                <h4>6<sup>th</sup> Mentor</h4>
+              </div>
+
+            </section>
+          </article>
+
+          <!--** These section contain the list of learning material i've used.-->
+          <section class="media_learning" id="learn">
+            <h2 class="sub_heading">Different Media Content I Learned From</h2>
+            <div class="media_container">
+              <!--**video-1 on auto play  -->
+              <figure>
+                <video src="Videos/video_1.mp4" autoplay loop muted type="video/mp4"></video>
+                <figcaption>Video from <a
+                    href="https://www.pexels.com/video/a-person-busy-working-on-his-laptop-5495892/" target="_blank"
+                    rel="noopener" title="www.pexels.com">pexels</a></figcaption>
+              </figure>
+              <!-- ** Youtube videos i learned rom -->
+              <fieldset>
+                <legend class="media_heading">Visual Media Learning Resources</legend>
+                <ul>
+                  <li>Bro Code <a href="https://www.youtube.com/results?search_query=bro+code" target="_blank"
+                      rel="noopener" title="Bro Code: Covers many languages"
+                      class="fa-solid fa-up-right-from-square"></a></li>
+                  <li>Ra Van <a href="https://www.youtube.com/results?search_query=ra+van+java" target="_blank"
+                      rel="noopener" title="Ra Van: specializes in java" class="fa-solid fa-up-right-from-square"></a>
+                  </li>
+                  <li>SuperSimple Dev <a href="https://www.youtube.com/results?search_query=super+simple+dev"
+                      target="_blank" rel="noopener" title="SuperSimpleDev: Specialize in Web development."
+                      class="fa-solid fa-up-right-from-square"></a></li>
+                  <li>OnlineTutorials <a href="https://www.youtube.com/results?search_query=online+tutorials"
+                      target="_blank" rel="noopener" title="OnlineTutorials: For mastering front-end development"
+                      class="fa-solid fa-up-right-from-square"></a></li>
+                  <li>Kevin Powell<a href="https://www.youtube.com/@KevinPowell" target="_blank" rel="noopener"
+                      title="Kevin Powell: Mastering CSS" class="fa-solid fa-up-right-from-square"></a></li>
+                  <li>Coding With Mosh<a href="https://www.youtube.com/results?search_query=coding+with+mosh"
+                      target="_blank" rel="noopener" title="coding with mosh: Covers many languages"
+                      class="fa-solid fa-up-right-from-square"></a></li>
+                  <li>Tech With Tim <a href="https://www.youtube.com/results?search_query=coding+with+tim"
+                      target="_blank" rel="noopener" title="techWithTim: Specialize in Python"
+                      class="fa-solid fa-up-right-from-square"></a></li>
+                  <li>developedbyed <a href="https://www.youtube.com/results?search_query=developedbyed" target="_blank"
+                      rel="noopener" title="DevelopedByEd: Front-end Development"
+                      class="fa-solid fa-up-right-from-square"></a></li>
+                </ul>
+              </fieldset>
+              <!-- ** Best websites  i learned rom -->
+              <fieldset>
+                <legend>Best Website for learning Software Development</legend>
+                <ul>
+                  <li>w3Schools <a href="https://www.w3schools.com" target="_blank" rel="noopener" title="w3Schools"
+                      class="fa fa-solid fa-certificate"></a></li>
+                  <li>Stack Overflow <a href="https://stackoverflow.com/" target="_blank" rel="noopener"
+                      title="Stack Overflow" class="fa fa-solid fa-certificate"></a></li>
+                  <li>Geeks4Geeks <a href="https://www.geeksforgeeks.org/" target="_blank" rel="noopener"
+                      title="Geeks4Geeks" class="fa fa-solid fa-certificate"></a></li>
+                  <li>YouTube <a href="https://www.youtube.com/" target="_blank" rel="noopener" title="Youtube"
+                      class="fa fa-solid fa-certificate"></a></li>
+                  <li>Coursera <a href="https://www.coursera.org/" target="_blank" rel="noopener" title="Coursera"
+                      class="fa fa-solid fa-certificate"></a></li>
+                  <li>Sololearn <a href="https://www.sololearn.com/en/" target="_blank" rel="noopener" title="Sololearn"
+                      class="fa fa-solid fa-certificate"></a></li>
+                  <li>w3Resource <a href="https://www.w3resource.com/" target="_blank" rel="noopener" title="W3Resource"
+                      class="fa fa-solid fa-certificate"></a></li>
+                  <li>Udemy <a href="https://www.udemy.com/" target="_blank" rel="noopener" title="Udemy"
+                      class="fa fa-solid fa-certificate"></a></li>
+                  <li>TutorialsPoint <a href="https://www.tutorialspoint.com/index.htm" target="_blank" rel="noopener"
+                      title="TutorialsPoint" class="fa fa-solid fa-certificate"></a></li>
+
+                </ul>
+              </fieldset>
+              <!-- ** Best website i learned rom -->
+              <figure>
+                <video src="Videos/video_2.mp4" autoplay loop muted type="video/mp4"></video>
+                <figcaption>Video from <a
+                    href="https://www.pexels.com/video/a-person-using-his-laptop-for-programming-5495845/"
+                    target="_blank" rel="noopener" title="www.pexels.com">pexels</a></figcaption>
+              </figure>
+              <!-- ** Books i learned from -->
+              <figure>
+                <video src="Videos/video_3.mp4" autoplay loop muted type="video/mp4"></video>
+                <figcaption>Video from <a href="https://www.pexels.com/video/person-encoding-in-a-computer-2278095/"
+                    target="_blank" rel="noopener" title="www.pexels.com">pexels</a></figcaption>
+              </figure>
+
+              <fieldset>
+                <legend>Best Books I've Read To Better My Knowledge <i class="fa fa-solid fa-book-open-reader"></i>
+                </legend>
+                <ol>
+                  <li>Java Programming <sup>6th Edition</sup> <b>Joyce Ferrell</b></i></li>
+                  <li>Absolute Java <sup>6th Edition</sup> <b>Walter Savitch</b></li>
+                  <li>Software Analysis and Design <i>in a changing world.</i> <sup>7th Edition</sup> <b>John W.
+                      Satzinger, Robert B. Jackson &amp; Stephen D. Burd.</b></li>
+                  <li>Scrum in Action.<i>Agile Software project Management and Development</i> <b>Andrew Pham &amp;
+                      Phuong-Van Pham</b></i></li>
+                  <li>Database Systems. <i>Design, Implementation, and Management.</i> <sup>7th Edition</sup> <b>Carlos
+                      Coronel &amp; Steven Morris</b></i></li>
+                  <li>C&#35; Programming. <i>FROM PROBLEM ANALYSIS TO PROGRAM DESIGN</i> <sup>4th Edition</sup>
+                    <b>BARBARA DOYLE</b>
+                  </li>
+                </ol>
+              </fieldset>
+            </div>
+          </section>
+
+        </section>
+      </section>
+
+      <section id="portfolio">
+        <h1>Portfolio</h1>
+        <div class="divider"></div>
+        <h3>This Section overview my proficiency with some programming languages and other technologies.</h3>
+        <!-- ** This section contains a list of languages i've certain amount of knowledge using -->
+        <div id="skills">
+          <fieldset>
+            <legend>Technical Skills</legend>
+            <ol>
+              <li>Microsoft Office Suite.</li>
+              <li>Computer Literacy.</li>
+              <li>Programming Languages.</li>
+              <li>Web Development.</li>
+              <li>Software Development.</li>
+              <li>Database Management.</li>
+              <li>System Design</li>
+            </ol>
+          </fieldset>
+          <fieldset>
+            <legend>Soft Skills</legend>
+            <ol>
+              <li>Creative Problem Solving.</li>
+              <li>Active Listener.</li>
+              <li>Team Player.</li>
+              <li>Presentation Skills.</li>
+              <li>Team Building.</li>
+              <li>Mentoring.</li>
+              <li>Innovation.</li>
+              <li>Delegation &amp; Negotiation.</li>
+              <li>Time Management.</li>
+              <li>Dependability.</li>
+              <li>Flexibility.</li>
+              <li>Patience.</li>
+            </ol>
+          </fieldset>
+          <fieldset>
+            <legend>Interpersonal Skills</legend>
+            <ol>
+              <li>Verbal Communication.</li>
+              <li>Non-Verbal Communication.</li>
+              <li>Observant &amp; Social Perceptivity.</li>
+              <li>Detail Oriented.</li>
+              <li>Networking.</li>
+              <li>Persuasion.</li>
+              <li>Motivation.</li>
+              <li>Diplomacy.</li>
+              <li>Collaboration.</li>
+              <li>Supportiveness.</li>
+              <li>Interpersonal Sensitivity.</li>
+            </ol>
+          </fieldset>
+          <fieldset>
+            <legend>Personal Attributes</legend>
+            <ol>
+              <li>Ethical &amp; Just.</li>
+              <li>Curious &amp; Hard-Work Driven.</li>
+              <li>Resiliency.</li>
+              <li>Adaptive.</li>
+              <li>Creative.</li>
+              <li>Integrity.</li>
+              <li>Self-Motivated.</li>
+              <li>Committed &amp; Dedicated.</li>
+            </ol>
+          </fieldset>
+        </div>
+        <!--**Languages and technologies i have some knowledge and experience with.  -->
+        <h3>These are some languages and technologies i have proficiency in utilizing.</h3>
+        <div class="portfolio_language" id="languages">
+          <div class="container">
+            <div class="circle" data-degree="85" data-color="#7cfc00">
+              <h2 class="number">85<span>%</span></h2>
+              <h4>Java</h4>
+            </div>
+            <div class="circle" data-degree="60" data-color="#fff600">
+              <h2 class="number">60<span>%</span></h2>
+              <h4>C&#35;</h4>
+            </div>
+            <div class="circle" data-degree="80" data-color="#7cfc00">
+              <h2 class="number">80<span>%</span></h2>
+              <h4>HTML</h4>
+            </div>
+            <div class="circle" data-degree="73" data-color="#7cfc00">
+              <h2 class="number">73<span>%</span></h2>
+              <h4>CSS</h4>
+            </div>
+            <div class="circle" data-degree="30" data-color="#f2003c">
+              <h2 class="number">30<span>%</span></h2>
+              <h4>JavaScript</h4>
+            </div>
+            <div class="circle" data-degree="50" data-color="#ff7518">
+              <h2 class="number">50<span>%</span></h2>
+              <h4>SQL</h4>
+            </div>
+            <div class="circle" data-degree="11" data-color="#f2003c">
+              <h2 class="number">11<span>%</span></h2>
+              <h4>Python</h4>
+            </div>
+            <div class="circle" data-degree="47" data-color="#ff7518">
+              <h2 class="number">47<span>%</span></h2>
+              <h4>IONIC</h4>
+            </div>
+            <div class="circle" data-degree="3" data-color="#cf1020">
+              <h2 class="number">3<span>%</span></h2>
+              <h4>React Native</h4>
+            </div>
+            <div class="circle" data-degree="67" data-color="#fff600">
+              <h2 class="number">67<span>%</span></h2>
+              <h4>Drawio/Design</h4>
+            </div>
+            <div class="circle" data-degree="20" data-color="#f2003c">
+              <h2 class="number">20<span>%</span></h2>
+              <h4>Blazor</h4>
+            </div>
+          </div>
+        </div>
+        <!-- **Languages and technologies i still like to learn and master. -->
+        <div id="toLearn">
+          <h3>These are some languages and technologies i have interest learning &amp; master.</h3>
+          <div class="infinite-scroll">
+            <div class="scroll" style="--t:25s">
+              <div>
+                <span>BootStrap</span>
+                <span>C</span>
+                <span>Firebase</span>
+                <span>AI</span>
+                <span>No-SQL</span>
+                <span>JavaScript</span>
+                <span>PHP</span>
+                <span>Angular</span>
+                <span>Swift</span>
+                <span>Power BI</span>
+                <span>C&plus;&plus;</span>
+                <span>Kotlin</span>
+                <span>React</span>
+                <span>Excel</span>
+                <span>Power Automate</span>
+                <span>Blazor Framework</span>
+                <span>React Native</span>
+                <span>IONIC</span>
+                <span>Excess</span>
+              </div>
+              <div>
+                <span>BootStrap</span>
+                <span>C</span>
+                <span>Firebase</span>
+                <span>AI</span>
+                <span>No-SQL</span>
+                <span>JavaScript</span>
+                <span>PHP</span>
+                <span>Angular</span>
+                <span>Swift</span>
+                <span>Power BI</span>
+                <span>C&plus;&plus;</span>
+                <span>Kotlin</span>
+                <span>React</span>
+                <span>Excel</span>
+                <span>Power Automate</span>
+                <span>Blazor Framework</span>
+                <span>React Native</span>
+                <span>IONIC</span>
+                <span>Excess</span>
+              </div>
+            </div>
+            <div class="scroll" style="--t:37s">
+              <div>
+                <span>Java</span>
+                <span>C&#35;</span>
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>SQL</span>
+                <span>Python</span>
+                <span>Figma</span>
+                <span>React</span>
+                <span>Java Swing</span>
+                <span>Blazor Framework</span>
+                <span>React Native</span>
+                <span>IONIC</span>
+              </div>
+              <div>
+                <span>Java</span>
+                <span>C&#35;</span>
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>SQL</span>
+                <span>Python</span>
+                <span>Figma</span>
+                <span>React</span>
+                <span>Java Swing</span>
+                <span>Blazor Framework</span>
+                <span>React Native</span>
+                <span>IONIC</span>
+              </div>
+            </div>
+            <div class="scroll" style="--t:10s">
+              <div>
+                <span>BootStrap</span>
+                <span>C</span>
+                <span>Firebase</span>
+                <span>No-SQL</span>
+                <span>JavaScript</span>
+                <span>PHP</span>
+                <span>Angular</span>
+                <span>Swift</span>
+                <span>Power BI</span>
+                <span>C&plus;&plus;</span>
+                <span>Kotlin</span>
+                <span>React</span>
+                <span>Excel</span>
+                <span>Power Automate</span>
+                <span>Blazor Framework</span>
+                <span>React Native</span>
+                <span>IONIC</span>
+                <span>Excess</span>
+              </div>
+              <div>
+                <span>BootStrap</span>
+                <span>C</span>
+                <span>Firebase</span>
+                <span>No-SQL</span>
+                <span>JavaScript</span>
+                <span>PHP</span>
+                <span>Angular</span>
+                <span>Swift</span>
+                <span>Power BI</span>
+                <span>C&plus;&plus;</span>
+                <span>Kotlin</span>
+                <span>React</span>
+                <span>Excel</span>
+                <span>Power Automate</span>
+                <span>Blazor Framework</span>
+                <span>React Native</span>
+                <span>IONIC</span>
+                <span>Excess</span>
+              </div>
+            </div>
+            <div class="scroll" style="--t:29s">
+              <div>
+                <span>Java</span>
+                <span>C&#35;</span>
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>SQL</span>
+                <span>Python</span>
+                <span>Figma</span>
+                <span>React</span>
+                <span>Java Swing</span>
+                <span>Blazor Framework</span>
+                <span>React Native</span>
+                <span>IONIC</span>
+              </div>
+              <div>
+                <span>Java</span>
+                <span>C&#35;</span>
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>SQL</span>
+                <span>Python</span>
+                <span>Figma</span>
+                <span>React</span>
+                <span>Java Swing</span>
+                <span>Blazor Framework</span>
+                <span>React Native</span>
+                <span>IONIC</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ** This section contains a list my personal and collaborative projects i've done. Stylesheet is drafted in an external file out the main css file[Projects_stylesheet.css] -->
+      <section id="myProjects">
+        <h1>My Projects</h1>
+        <div class="divider"></div>
+
+        <div class="projects-row">
+          <!--** PROJECT 1 -->
+          <div class="project-item">
+            <div class="project_img">
+              <img src="Images/portfolioProject.png" alt="...">
+            </div>
+            <div class="project_info">
+              <h4>2<sup>nd</sup> Personal Portfolio</h4>
+              <p>My second and improved personal portfolio. <code>[created:2023/09/06 21:11]</code> <br>
+                These not many functionality but adaptive to almost all screen sizes. The change, progress, and growth
+                is obvious when compared to my first portfolio (<b>RIGHT</b>).<br>
+                With my steady growth and consistency i guess time will tell how my next portfolio be like. &#128512;
+              </p>
+              <a href="https://banelezulu.github.io/Portfolio-2023/" target="_blank" rel="noopener"
+                title="View on github pages"><i class="fa-solid fa-up-right-from-square"></i></a>
+            </div>
+          </div>
+
+          <!--** PROJECT 2 -->
+          <div class="project-item">
+            <div class="project_img">
+              <img src="Images/portfolioProject1.png" alt="...">
+            </div>
+            <div class="project_info">
+              <h4>1<sup>st</sup> Personal Portfolio</h4>
+              <p>This is my first ever portfolio.
+                <code>[created:2022]. This was actually as task given to as by <strong>Dr Jugoo</strong> as introduction to web development.</code>
+              </p>
+              <a href="#" target="_self" rel="noopener" title="No live page for this project"><i
+                  class="fa-solid fa-up-right-from-square" onclick="method()"></i></a>
+            </div>
+          </div>
+
+          <!--** PROJECT 3 -->
+          <div class="project-item">
+            <div class="project_img">
+              <img src="Images/registrationSysProject.png" alt="...">
+            </div>
+            <div class="project_info">
+              <h4>Student Management System</h4>
+              <p>collaborative project 1. <code>[created:2022/04/18 17:20]</code> i worked on this project with
+                <strong>Sanele Mnyandu</strong>. This is a desktop application created using Java Swing. The main
+                purpose was for student registration, the program had to wite and read to and from file the registered
+                students.
+                The system had 4 pages/frames. <i>Home, Create Student, Delete Student, and Display student</i>.
+              </p>
+              <a href="#" target="_self" rel="noopener" title="No live page for this project"><i
+                  class="fa-solid fa-up-right-from-square"></i></a>
+            </div>
+          </div>
+
+          <!--** PROJECT 4 -->
+          <div class="project-item">
+            <div class="project_img">
+              <img src="Images/bestBrightnessProject.png" alt="...">
+            </div>
+            <div class="project_info">
+              <h4>C&#35; Web Application</h4>
+              <p>Collaborative project 2.<code>[created:2023/10/15 21:45]</code> i worked on this project with
+                <strong>Sanele Mnyandu</strong>. Here we were required replicate a project we had previously made using
+                Java Swing to a C&#35; program is VS. The system was required to be a web based application using Blazor
+                front-end framework..
+              </p>
+              <a href="#" target="_self" rel="noopener" title="No live page for this project"><i
+                  class="fa-solid fa-up-right-from-square"></i></a>
+            </div>
+          </div>
+
+          <!--** PROJECT 4 -->
+          <div class="project-item">
+            <div class="project_img">
+              <img src="Images/bestBrightnessCustomerProject.png" alt="...">
+            </div>
+            <div class="project_info">
+              <h4>Best Brightness Project</h4>
+              <p>Collaborative project 3. <code>[created:2023/09/26 11:24]</code> i worked on this project with
+                <strong>Sanele Mnyandu</strong>. The project was aimed at testing our level and capability to solve an
+                actually real life problem using code.The client was one our lecture who own the store in question, we
+                were required to build fully functional desktop app for managing stock, inventory, suppliers, ect. The
+                system was divided into 4 subsystems. <i>Admin subsystem, Store Manager subsystem, Store/Sales person
+                  subsystem, and customer subsystem </i>.
+              </p>
+              <a href="#" target="_self" rel="noopener" title="No live page for this project"><i
+                  class="fa-solid fa-up-right-from-square"></i></a>
+            </div>
+          </div>
+
+          <!--** PROJECT 5 -->
+          <div class="project-item">
+            <div class="project_img">
+              <img src="Images/clockProject.png" alt="...">
+            </div>
+            <div class="project_info">
+              <h4>Simple Digital Clock</h4>
+              <p>My first project, using Java swing for UI Design and programming.
+                <code>[created:2022/05/13 14:33]</code>
+              </p>
+              <a href="#" target="_self" rel="noopener" title="No live page for this project"><i
+                  class="fa-solid fa-up-right-from-square"></i></a>
+            </div>
+          </div>
+
+          <!--** PROJECT 6 -->
+          <div class="project-item">
+            <div class="project_img">
+              <img src="Images/messiArgProject.png" alt="...">
+            </div>
+            <div class="project_info">
+              <h4>Messi Portfolio</h4>
+              <p>Small project with HTML, CSS. <code>[created: 2023/10/28 13:50]</code> this is one of my favorite
+                projects, a very very simple UI design and basic animations, great color combination, and overall simple
+                design.
+                <br>
+                I did follow the <strong>KISS Principle</strong>.&#128517;
+              </p>
+              <a href="#" target="_self" rel="noopener" title="No live page for this project"><i
+                  class="fa-solid fa-up-right-from-square"></i></a>
+            </div>
+          </div>
+
+          <!--** PROJECT 7 -->
+          <div class="project-item">
+            <div class="project_img">
+              <img src="Images/prectice.png" alt="...">
+            </div>
+            <div class="project_info">
+              <h4>Working With Texts</h4>
+              <p>A small practical exercise working with text, colors, borders, buttons, and layout or structuring of
+                document
+              </p>
+              <a href="#" target="_self" rel="noopener" title="No live page for this project"><i
+                  class="fa-solid fa-up-right-from-square"></i></a>
+            </div>
+          </div>
+
+          <!--** PROJECT 8 -->
+          <div class="project-item">
+            <div class="project_img">
+              <img src="Images/oncyteGamerz.png" alt="...">
+            </div>
+            <div class="project_info">
+              <h4>GamerzOncyte</h4>
+              <p>This is by far my greatest and most difficulties desktop app.
+                <code>[created: 2023/10/18 19:56]</code> i've always wanted to make an application that can handle
+                many processes and this one is about there, well firstly it is not finished <i>stacked in some
+                  difficulties</i>. The application is created using C&#35; forms. The objective is to create a large
+                game sale system where, users can create accounts, browse and buy games. The system is still under
+                development.
+              </p>
+              <a href="#" target="_self" rel="noopener" title="No live page for this project"><i
+                  class="fa-solid fa-up-right-from-square"></i></a>
+            </div>
+          </div>
+
+          <!--** PROJECT 9 -->
+          <div class="project-item">
+            <div class="project_img">
+              <img src="Images/projectX.png" alt="...">
+            </div>
+            <div class="project_info">
+              <h4>Project X</h4>
+              <p>I consider this a skeleton of the project that was once envisioned.
+              </p>
+              <a href="#" target="_self" rel="noopener" title="No live page for this project"><i
+                  class="fa-solid fa-up-right-from-square"></i></a>
+            </div>
+          </div>
+
+          <!--** PROJECT 10 -->
+          <div class="project-item">
+            <div class="project_img">
+              <img src="Images/movies.png" alt="...">
+            </div>
+            <div class="project_info">
+              <h4>Movie Rental</h4>
+              <p>
+                Mini project that allow users to modify the movies in the database. The main user can add, delete,
+                modify, update, and search for the move. The end users can buy movies if it is in-stock.
+              </p>
+              <a href="#" target="_self" rel="noopener" title="No live page for this project"><i
+                  class="fa-solid fa-up-right-from-square"></i></a>
+            </div>
+          </div>
+
+          <!--** PROJECT 11 -->
+          <div class="project-item">
+            <div class="project_img">
+              <img src="Images/zodiac.png" alt="...">
+            </div>
+            <div class="project_info">
+              <h4>Zodiac</h4>
+              <p>
+                This is first large project of any language <code>[created: 2023/06/26 14:55]</code> the objective of
+                the project is for a user to provide their basic information about themselves such as their names,
+                lastname, sex, and birth details than the system works with the data provide the user with detailed
+                information about themselves based on their zodiac sign. The information includes areas of life such
+                friendships, personality, relationships,career guidance, such as listing few job where a person with a
+                certain temperament would usually thrive in, along with other things.
+              </p>
+              <a href="#" target="_self" rel="noopener" title="No live page for this project"><i
+                  class="fa-solid fa-up-right-from-square"></i></a>
+            </div>
+          </div>
+
+          <!--** PROJECT 12 -->
+          <div class="project-item">
+            <div class="project_img">
+              <img src="Images/tic-tac-toe.png" alt="...">
+            </div>
+            <div class="project_info">
+              <h4>Tic-Tac-Toe</h4>
+              <p>
+                Small project i did using Java Swing. The user can play different level, by increasing the number of
+                available spaces to move to.
+              </p>
+              <a href="#" target="_self" rel="noopener" title="No live page for this project"><i
+                  class="fa-solid fa-up-right-from-square"></i></a>
+            </div>
+          </div>
+
+          <!--** PROJECT 13 -->
+          <div class="project-item">
+            <div class="project_img">
+              <img src="Images/R_P_S_game.png" alt="...">
+            </div>
+            <div class="project_info">
+              <h4>Rock-Paper-Scissors</h4>
+              <p>
+                The classic rock-paper-scissors game
+                <code>[created: 2024/01/2 19:58]</code> the user can only play with the computer. User can create
+                account to get more detailed information.
+              </p>
+              <a href="#" target="_self" rel="noopener" title="No live page for this project"><i
+                  class="fa-solid fa-up-right-from-square"></i></a>
+            </div>
+          </div>
+
+          <!--** PROJECT 14 -->
+          <div class="project-item">
+            <div class="project_img">
+              <img src="Images/home.png" alt="...">
+            </div>
+            <div class="project_info">
+              <h4>Just Coding</h4>
+              <p>
+                JustCoding is an website designed for every IT enthusiast <code>[created: 2024/12/02 02:02]</code>
+                the aim is simplify the process of catching up on the new trends, technologies, systems, and languages.
+                For unexperienced (noobs) in the IT world JustCoding help answer the common questions and remove some
+                stigma around IT,
+                users can be easily linked to the very best web sites where the can get the very necessary skills and
+                information to not just survive but thrive in the IT world.
+              </p>
+              <a href="https://banelezulu.github.io/JustCoding/" target="_blank" rel="noopener"
+                title="View project on github pages"><i class="fa-solid fa-up-right-from-square"></i></a>
+            </div>
+          </div>
+
+          <!--** PROJECT 15 -->
+          <div class="project-item">
+            <div class="project_img">
+              <img src="Images/footer.png" alt="...">
+            </div>
+            <div class="project_info">
+              <h4>Footer</h4>
+              <p style="font-size:0.6em;">
+                A basic Java Swing footer component.<code>[created: 2023/11/11 20:58]</code> I made this footer to
+                simplify the process of building new a footer
+                for every application that might require on. This footer can be implemented in to the new program and
+                than i make changes were needed.
+              </p>
+              <a href="#" target="_self" rel="noopener" title="No live page for this project"><i
+                  class="fa-solid fa-up-right-from-square"></i></a>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <section id="contacts">
+        <h1>Contact</h1>
+        <div class="divider"></div>
+        <p class="contact-info">
+          Lets get in touch.
+        </p>
+
+        <div class="contact-row">
+          <!-- LEFT COLUMN -->
+          <div class="contact-left">
+            <!-- Email-Box -->
+            <div class="icon-box">
+              <div class="icon">
+                <i class="fa-solid fa-envelope"></i>
+              </div>
+              <div class="info">
+                <h4>Email</h4>
+                <p><a href="mailto:BaneleZulu85@gmail.com">BaneleZulu85&commat;.com</a></p>
+              </div>
+            </div>
+
+            <!-- Call-Box -->
+            <div class="icon-box">
+              <div class="icon">
+                <i class="fa-solid fa-phone"></i>
+              </div>
+              <div class="info">
+                <h4>Phone Details</h4>
+                <p>&plus;27 7* **** **4</p>
+              </div>
+            </div>
+
+            <!-- Location -->
+            <div class="icon-box">
+              <div class="icon">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <div class="info">
+                <h4>Address</h4>
+                <p>KwaZulu Natal, Durban, *********, ********** Township, **** ********* Road, 3**0</p>
+              </div>
+            </div>
+
+            <div class="map">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d6724.224729709749!2d30.6126128795652!3d-29.827825680788038!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sza!4v1699353429285!5m2!1sen!2sza"
+                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" title="Google Maps"
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
+          </div>
+
+          <!-- LEFT COLUMN -->
+          <div class="contact-right">
+            <form id="myForm">
+              <input type="text" name="Name" id="name" placeholder="Your Name">
+              <input type="email" name="Email" id="email" placeholder="yourEmail@gmail.com">
+              <input type="text" name="subject" id="subject" placeholder="Subject">
+              <textarea name="Message" id="msg" rows="10" placeholder="Your message"></textarea>
+              <input type="submit" value="Send Message">
+            </form>
+            <span id="message"></span>
+          </div>
+        </div>
+      </section>
+      <!-- **************** Document body ends*************** -->
+
+      <!--** Footer section -->
+      <footer>
+        <div class="footer_container">
+          <!-- **This is the left side of the footer, which will house my image, and pseudonym -->
+          <div class="container_left">
+            <h5>Nihil</h5>
+          </div>
+
+          <!--**this is the right side of the footer, containing the most inform   -->
+          <div class="container_right">
+
+            <div class="inner_right_top">
+              <div class="portfolio_img"></div>
+              <summary>
+                <p>This web portfolio is created and maintained by <strong>Banele Zulu</strong> . All information
+                  presented is
+                  accurate to the best of my
+                  knowledge and is intended to share insights into my personal journey and experiences in software
+                  development.
+                </p>
+              </summary>
+            </div>
+
+            <div class="inner_right_center">
+              <h4>Saw Everything<span>?</span> Jump Back.</h4>
+              <div class="tags">
+                <ul class="tag_links">
+                  <li><a href="#home" title="Back to Home" rel="noopener">HOME</a></li>
+                  <li><a href="#about" title="Back to About" rel="noopener">ABOUT</a></li>
+                  <li><a href="#fam" title="Back to Siblings" rel="noopener">FAMILY</a></li>
+                  <li><a href="#dive" title="Back to About++" rel="noopener">HISTORY DIVE</a></li>
+                  <li><a href="#grow" title="Back to Personal Growth" rel="noopener">PERSONAL GROWTH</a></li>
+                  <li><a href="#mentors" title="Back to Mentors" rel="noopener">MENTORS</a></li>
+                  <li><a href="#learn" title="Back to Learning Resources" rel="noopener">LEARNING RESOURCES</a></li>
+                  <li><a href="#portfolio" title="Back to Portfolio" rel="noopener">PORTFOLIO</a></li>
+                  <li><a href="#skills" title="Back to Languages" rel="noopener">SKILLS</a></li>
+                  <li><a href="#languages" title="Back to Languages" rel="noopener">LANGUAGES</a></li>
+                  <li><a href="#toLearn" title="Back to Languages" rel="noopener">TO LEARN</a></li>
+                  <li><a href="#myProjects" title="Back to Projects" rel="noopener">PROJECTS</a></li>
+                  <li><a href="#contacts" title="Back to Contacts" rel="noopener">CONTACT</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="inner_right_bottom">
+              <h3>Find Me Here<span>!</span></h3>
+              <div class="socials">
+                <a href="https://github.com/BaneleZulu" target="_blank" rel="noopener" title="nihil@github"><i
+                    class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/banele-zulu/" target="_blank" rel="noopener"
+                  title="nihil@linkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://www.whatsapp.com" target="_blank" rel="noopener" title="nihil@whatsapp"><i
+                    class="fa-brands fa-whatsapp"></i></a>
+                <a href="https://www.instagram.com" target="_blank" rel="noopener" title="nihil@instagram"><i
+                    class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.facebook.com" target="_blank" rel="noopener" title="nihil@facebook"><i
+                    class="fa-brands fa-facebook"></i></a>
+                <a href="https://twitter.com" target="_blank" rel="noopener" title="nihil@X"><i
+                    class="fa-brands fa-twitter"></i></a>
+                <a href="https://www.youtube.com" target="_blank" rel="noopener" title="nihil@youtube"><i
+                    class="fa-brands fa-youtube"></i></a>
+                <a href="mailto:BaneleZulu85@gmail.com" target="_blank" rel="noopener" title="nihil@gmail"><i
+                    class="fa-solid fa-envelope"></i></a>
+                <a href="tel:+27 7* **** **4" target="_blank" rel="noopener" title="Need me? Call here."><i
+                    class="fa-solid fa-phone"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+      <p class="out_text">&copy;2024 Copy right reserved.</p>
+      <p class="out_text" style="font-size:.7rem;">Made with <i class="fa-solid fa-heart"></i> by <a
+          href="https://www.linkedin.com/in/banele-zulu-a30861255/?trk=opento_sprofile_topcard" target="_blank"
+          rel="noopener" title="nihil@github">Banele Zulu</a>
+      </p>
+    </main>
+  </main>
+
+  <script src="https://kit.fontawesome.com/a0f6b1fd98.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+</body>
+
+<!--? I placed this script here inside the main document because it does'nt work when outside this doc. WHY? IDONT KNOW, IS IT GOOD PRACTICE?, NO   -->
+<script>
+  var typed = new Typed(".auto_typed", {
+    strings: ["Programmer", "Software Developer", "Web Developer", "Web Designer", "Front-End Developer", "Back-End Developer"],
+    typeSpeed: 150,
+    backSpeed: 90,
+    backDelay: 1000,
+    loop: true,
+    showCursor: true,
+    cursorChar: "|",
+    attr: null,
+    contentType: "html",
+    loopCount: false,
+    callback: function () {
+      console.log("Typed.js callback!");
+    }
+  });
+
+  //TODO:  Make take this to a separate file. Controls the nav 
+  let is_nav_visible = false;
+  const toggle_button = document.getElementById("bars_icon");
+  const mobile_nav = document.getElementById("mobile_nav");
+
+  toggle_button.addEventListener("click", () => {
+    if (is_nav_visible == false) {
+      toggle_button.classList.remove("fa", "fa-solid", "fa-bars");
+      toggle_button.classList.add("fa-sharp", "fa-solid", "fa-x");
+      mobile_nav.style.display = "inline-block";
+      is_nav_visible = true;
+    }
+    else {
+      toggle_button.classList.remove("fa-sharp", "fa-solid", "fa-x");
+      toggle_button.classList.add("fa", "fa-solid", "fa-bars");
+      mobile_nav.style.display = "none";
+      is_nav_visible = false;
+    }
+  });
+</script>
+
+<!--FIXME: By.NIHIL -->
+
+</html>

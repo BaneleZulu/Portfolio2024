@@ -1,0 +1,1192 @@
+@import url("https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100;200;300&display=swap");
+
+/* reset CSS */
+* {
+  font-family: "Playpen", sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* GLOBAL VARIABLES */
+:root {
+  --clr-deco: DarkCyan;
+  --clr-style-1: rgb(218, 29, 129);
+  --clr-style-2: rgb(57, 174, 186);
+
+  --clr-body-bg: hsl(0 0% 90%);
+  --clr-nav-bg: hsl(0, 0%, 75%);
+  --clr-card-bg: hsl(0 0% 100%);
+  --clr-text: hsl(0 0% 15%);
+  --clr-heading: hsl(0 0% 25%);
+
+  --text-font-1: "M PLUS 1 Code", monospace;
+  --text-font-2: "Playpen Sans", sans-serif;
+  --heading-size: 3rem;
+  --sub-heading-size: 1rem;
+  --text-size: 1em;
+  --text-size-2: 0.1em;
+}
+/* ---==BACKGROUND CONTROL CODE==--- */
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.color-picker > fieldset {
+  border: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1rem;
+  width: 3%;
+  margin-inline: auto;
+  border-radius: 1rem 0 0 0;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+
+  & input {
+    cursor: pointer;
+  }
+}
+
+.color-picker input[type="radio"] {
+  appearance: none;
+  width: 1.3rem;
+  height: 1.3rem;
+  outline: 3px solid var(--radio-color, --clr-heading);
+  outline-offset: 3px;
+  border-radius: 50%;
+}
+
+.color-picker input[type="radio"]:checked {
+  background-color: var(--radio-color);
+}
+
+.color-picker input[type="radio"]#light {
+  --radio-color: gray;
+}
+
+.color-picker input[type="radio"]#pink {
+  --radio-color: pink;
+}
+
+.color-picker input[type="radio"]#blue {
+  --radio-color: blue;
+}
+
+.color-picker input[type="radio"]#green {
+  --radio-color: green;
+}
+
+.color-picker input[type="radio"]#dark {
+  --radio-color: #232323;
+}
+
+.pink {
+  --clr-body-bg: hsl(310 50% 90%);
+  --clr-nav-bg: hsl(310 50% 85%);
+  --clr-card-bg: hsl(310 50% 100%);
+  --clr-text: hsl(310 50% 15%);
+  --clr-heading: hsl(310 50% 25%);
+}
+
+.blue {
+  --clr-body-bg: hsl(209 50% 90%);
+  --clr-nav-bg: hsl(209 50% 85%);
+  --clr-card-bg: hsl(209 50% 100%);
+  --clr-text: hsl(209 50% 15%);
+  --clr-heading: hsl(209 50% 25%);
+}
+
+.green {
+  --clr-body-bg: hsl(109 50% 90%);
+  --clr-nav-bg: hsl(109 50% 85%);
+  --clr-card-bg: hsl(109 50% 100%);
+  --clr-text: hsl(109 50% 15%);
+  --clr-heading: hsl(109 50% 25%);
+}
+
+.dark {
+  --clr-body-bg: hsl(209 50% 10%);
+  --clr-nav-bg: hsl(209 50% 85%);
+  --clr-card-bg: hsl(209 50% 5%);
+  --clr-text: hsl(209 50% 90%);
+  --clr-heading: hsl(209 50% 80%);
+}
+
+:root:has(#pink:checked) {
+  --clr-body-bg: hsl(310 50% 90%);
+  --clr-nav-bg: hsl(310 50% 85%);
+  --clr-card-bg: hsl(310 50% 100%);
+  --clr-text: hsl(310 50% 15%);
+  --clr-heading: hsl(310 50% 25%);
+}
+
+:root:has(#blue:checked) {
+  --clr-body-bg: hsl(209 50% 90%);
+  --clr-nav-bg: hsl(209 50% 85%);
+  --clr-card-bg: hsl(209 50% 100%);
+  --clr-text: hsl(209 50% 15%);
+  --clr-heading: hsl(209 50% 25%);
+}
+
+:root:has(#green:checked) {
+  --clr-body-bg: hsl(109 50% 90%);
+  --clr-nav-bg: hsl(109 50% 85%);
+  --clr-card-bg: hsl(109 50% 100%);
+  --clr-text: hsl(109 50% 15%);
+  --clr-heading: hsl(109 50% 25%);
+}
+
+:root:has(#dark:checked) {
+  --clr-body-bg: hsl(209 50% 10%);
+  --clr-nav-bg: hsl(209 50% 15%);
+  --clr-card-bg: hsl(209 50% 5%);
+  --clr-text: hsl(209 50% 90%);
+  --clr-heading: hsl(209 50% 80%);
+}
+
+body {
+  background-color: var(--clr-body-bg);
+  /* background-color: green !important;
+  padding: 0 !important; */
+
+  main {
+    /* background-color: red !important; */
+    margin: 0;
+  }
+}
+
+/* CENTERING THE ENTIRE DOCUMENT */
+main section {
+  padding: 0 90px 0 90px !important;
+}
+
+/* PAGE DIVIDER */
+.divider {
+  width: 80px;
+  height: 5px;
+  background-color: var(--clr-deco);
+  border-radius: 3px;
+  margin: 15px 0 15px 0;
+}
+
+section {
+  margin-bottom: 25px !important;
+}
+
+/* CODE FOR ALL h1 HEADING IN THE MAIN CONTENT F THE DOCUMENT */
+main section h1 {
+  font-size: var(--heading-size) !important;
+  /* background-color: red !important; */
+  font-weight: 600;
+  color: var(--clr-heading);
+  margin-top: 20px;
+}
+
+main nav {
+  /* overflow: hidden; */
+
+  & aside.navbar {
+    position: fixed;
+    left: 0;
+    width: 50px;
+    height: 100vh;
+    background-color: var(--clr-nav-bg);
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    transition: width 0.5s;
+    overflow-x: hidden;
+    z-index: 5;
+    border-right: 3px solid var(--clr-deco);
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+    overflow: hidden;
+    box-shadow: 10px 0 30px var(--clr-heading);
+
+    & i {
+      display: none;
+      padding-left: 10px;
+    }
+
+    ul.nav {
+      list-style-type: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: left;
+      align-items: center;
+      gap: 15px;
+      margin-top: 20px;
+      padding-left: 5px;
+
+      & li {
+        padding: 10px;
+        margin-bottom: 5px;
+        float: left;
+        display: flex;
+        justify-content: flex-start;
+        width: 100%;
+
+        & a {
+          text-decoration: none;
+          color: var(--clr-deco);
+          font-weight: 600;
+          font-size: 1.4em;
+          display: flex;
+          margin-right: 10px;
+
+          & i {
+            font-size: 0.6em;
+            color: var(--clr-heading);
+            letter-spacing: 0.2rem;
+            margin-left: 10px;
+          }
+        }
+      }
+    }
+  }
+  /*** Quick access social media platform on the nav bar  */
+
+  & .social_media {
+    width: 40px;
+    position: fixed;
+    z-index: 10;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin: 0 0 10px 5px;
+
+    & a {
+      text-decoration: none;
+      color: var(--clr-heading);
+      font-weight: 600;
+      font-size: 1.4em;
+      display: flex;
+      margin-right: 10px;
+    }
+  }
+}
+
+.navbar:hover {
+  width: 200px;
+
+  & i {
+    display: block;
+    transition: 0.9s all ease-in-out;
+  }
+}
+.navbar .nav > li:hover {
+  width: 90%;
+  border-left: 3px solid var(--clr-body-bg);
+  border-bottom: 4px solid var(--clr-body-bg);
+  transition: 0.9s all ease-in-out;
+}
+.navbar .nav li a > i:hover {
+  font-size: 0.7em;
+  text-transform: uppercase;
+}
+.navbar .nav li a[title~="fa-solid"]:active {
+  background-color: red !important;
+}
+
+/*** Mobile navigation */
+body nav ul#mobile_nav {
+  background-color: #fff;
+  width: 300px;
+  padding: 10px 0 10px 10px;
+  z-index: 20;
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+  position: absolute;
+  right: 0;
+  top: 90px;
+  list-style-type: none !important;
+  & a {
+    text-decoration: none;
+    & i {
+      color: var(--clr-text);
+    }
+  }
+}
+
+#mobile_nav li a:hover {
+  color: var(--clr-deco);
+  transition: all 0.2s ease-in-out;
+  font-size: 1.2rem;
+  text-decoration: underline;
+  border-bottom: 2px solid var(--clr-heading);
+}
+
+/*** DOCUMENT MAIN BODY */
+main.content {
+  position: relative;
+  height: 100vh;
+  background-color: var(--clr-body-bg);
+  /* border: 7px solid red; */
+  padding: 10px;
+
+  & .sub_heading {
+    font-size: 1.2em;
+    font-weight: 600;
+    color: var(--clr-heading);
+    margin: 10px 0 10px 0;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: underline;
+  }
+}
+
+/***DOCUMENT HEADER CONTENT*/
+/** Portfolio image and nav bar toggle button  */
+main header {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding-right: 15px;
+  margin: 10px 15px 0 0;
+  z-index: 5;
+
+  & img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+  }
+
+  & ul {
+    font-size: 1.6rem;
+    color: var(--clr-body-bg);
+  }
+
+  & ul:hover {
+    cursor: pointer;
+  }
+}
+
+/***Set all background color of the different page sections*/
+main section {
+  background-color: var(--clr-body-bg);
+  /* border: 10px solid red; */
+  padding: 70px;
+}
+
+/*! SECTION -1 > HOME SECTION CODE */
+main section#home {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  & video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  & div {
+    margin-left: 45px;
+  }
+  & img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    -webkit-user-select: none;
+    user-select: none;
+    mix-blend-mode: screen;
+  }
+
+  & div {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 3;
+    display: block !important;
+    padding: 0 0 9px 15px;
+
+    & h3 {
+      font-size: 2.1em;
+      font-weight: 600;
+      color: var(--clr-text-bg);
+    }
+
+    & h1 {
+      color: var(--clr-text);
+      font-size: 4rem;
+      font-weight: 600;
+      text-align: center;
+
+      & span {
+        font-family: "Lobster", sans-serif;
+        letter-spacing: 1.1rem;
+        font-size: 7rem;
+        font-weight: 800;
+        font-variant: small-caps;
+        color: var(--clr-body-bg);
+      }
+    }
+
+    & p {
+      color: var(--clr-text);
+      font-size: 1.8em;
+
+      & strong {
+        color: #333;
+        font-size: 1.7em;
+        font-weight: 600;
+        letter-spacing: 0.3rem;
+      }
+    }
+  }
+}
+/*! SECTION -2 > ABOUT SECTION CODE */
+main section#about {
+  min-width: 400px;
+  padding: 10px;
+  margin-bottom: 30px;
+
+  & p {
+    font: var(--text-font-1);
+    margin: auto;
+    width: 80%;
+    text-align: center;
+    font-size: 1.1em;
+    font-weight: 100;
+    color: var(--clr-text);
+  }
+
+  /*** Images parent container: This is the container for my siblings images */
+  & fieldset.family_content {
+    height: 80vh;
+    width: 100%;
+    margin: 10px 0 50px 0;
+    border-radius: 15px;
+    box-shadow: 0 0 25px #fff, 0 0 5px #fff, 0 0 7px var(--clr-heading),
+      0 0 10px var(--clr-nav-bg), 0 0 15px var(--clr-heading),
+      0 0 30px var(--clr-deco), 0 0 40px var(--clr-heading);
+    background-color: #fff;
+    background: linear-gradient(
+      to right bottom var(--clr-nav-bg),
+      var(--clr-nav-bg)
+    );
+    z-index: 2;
+    -webkit-backdrop-filter: blur(4rem);
+    backdrop-filter: blur(4rem);
+    border: none;
+  }
+
+  /* TODO: The heading of the MY FAMILY SECTION */
+  & legend {
+    font-size: 2em;
+    font-weight: 800;
+    font-variant: small-caps;
+    color: var(--clr-heading);
+  }
+
+  & article {
+    h2 {
+      color: var(--clr-heading);
+      font-size: 1.2em;
+      text-decoration: underline;
+      text-align: center;
+      margin-bottom: 10px;
+      letter-spacing: 0.2rem;
+    }
+
+    /*** This is the styling for the grid(cards) content in the about section */
+    & section.auto-grid {
+      --min-column-size: 300px;
+
+      display: grid;
+      gap: clamp(1rem, 5vmax, 1.625rem);
+      grid-template-columns: repeat(
+        auto-fit,
+        minmax(min(100%, var(--min-column-size)), 1fr)
+      );
+      /* ! Must fix the sub heading [personal growth journey] */
+      /* & h2 {
+        color: red !important;
+        color: var(--clr-heading);
+        text-decoration: underline;
+        letter-spacing: 0.2rem;
+      } */
+
+      & .card {
+        padding: 1.5rem;
+        background-color: var(--clr-card-bg);
+        border-block-start: 0.5rem solid var(--clr-heading);
+        border-radius: 0.5rem;
+      }
+
+      & .card > * {
+        margin: 0;
+      }
+
+      & .card h3 {
+        color: var(--clr-heading);
+        text-decoration: underline;
+        letter-spacing: 0.2rem;
+      }
+
+      & ol,
+      ul {
+        color: var(--clr-text);
+      }
+
+      & .card > *:not(:last-child) {
+        margin-bottom: 0.75rem;
+      }
+    }
+  }
+
+  & section.media_learning {
+    /* background-color: red; */
+    margin: 15px;
+
+    & div.media_container {
+      --min-column-size: 400px;
+      display: grid;
+      gap: 50px;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    & figure {
+      border-radius: 1rem;
+
+      & video {
+        border-radius: inherit;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      & figcaption {
+        color: var(--clr-heading);
+        font-size: 1em;
+      }
+    }
+
+    & fieldset {
+      border-radius: 1rem;
+      border: 3px solid var(--clr-nav-bg);
+
+      & legend {
+        font-size: 1.3em;
+        font-weight: 600 !important;
+        color: var(--clr-heading);
+
+        & i {
+          border-left: 3px solid var(--clr-nav-bg);
+          padding-left: 5px;
+        }
+      }
+
+      & ul {
+        padding: 1rem 0 0 3rem !important;
+
+        & li {
+          color: var(--clr-text);
+          font-size: 1em;
+
+          & a {
+            color: var(--clr-deco);
+            margin-left: 10px;
+            font-size: 17px;
+            text-decoration: none;
+            transition: 0.2s ease-in-out;
+          }
+          & a:hover {
+            font-size: 18px;
+            color: var(--clr-heading);
+            transition: 0.2s ease-in-out;
+          }
+        }
+      }
+
+      & ol {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        & li {
+          margin-bottom: 4px;
+          width: 90%;
+          font-size: 0.8em;
+          color: var(--clr-text);
+
+          & b {
+            color: var(--clr-text);
+            font-size: 1em;
+            padding-left: 2px;
+            border-left: 2px solid var(--clr-heading);
+          }
+
+          & sup {
+            color: var(--clr-text);
+          }
+
+          & i {
+            color: var(--clr-text);
+            font-size: 0.9em;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*! SECTION -3 > PORTFOLIO SECTION CODE */
+/* ** Code is in external file. Portfolio_stylesheet.css */
+
+/*! SECTION -4 > PROJECT SECTION CODE */
+/* ** Code is in external file. myProjects_stylesheet.css */
+
+/* SECTION -5 > CONTACTS SECTION CODE */
+/*! Code is in external file. Contact_stylesheet.css */
+
+/* SECTIOn -6 > FOOTER SECTION CODE */
+/*! Code is in external file. Footer_stylesheet.css */
+
+/*** This is the text at the end of the document.*/
+body main main p.out_text {
+  color: var(--clr-text);
+  text-align: center;
+  padding: 0;
+  margin: 0;
+
+  & i {
+    color: var(--clr-deco);
+  }
+}
+
+/* *MEDIA QUERY  FOR ALL PARENT COMPONENTS_ Removes the navigation bar */
+@media screen and (max-width: 1200px) {
+  main nav {
+    display: none;
+  }
+}
+/*  
+! Very important media query. Controls the width of the entire document
+@media screen and (max-width: 1000px) {
+  body {
+    padding: 0;
+  }
+
+  body main {
+    padding: 0;
+  }
+
+  ** Controls most of the responsive adaption 
+  body main main.content {
+    --webkit-width: fit-content;
+    width: fit-content;
+  }
+}
+@media screen and (max-width: 1001px) {
+  body {
+    padding: 0;
+  }
+
+  body main {
+    padding: 0;
+  }
+
+  ** Controls most of the responsive adaption 
+  body main main.content {
+    --webkit-width: fit-content;
+    width: fit-content;
+  }
+}
+!Both The above media queries are very important 
+
+@media screen and (min-width: 1001px) {
+  main {
+    position: absolute;
+    left: 0;
+  }
+
+  main section {
+    padding: 0 !important;
+    margin-left: 20px;
+    width: 100% !important;
+  }
+
+  main section h1 {
+    font-size: 80px !important;
+  }
+
+  header {
+    & img {
+      width: 120px !important;
+      height: 120px !important;
+    }
+    & ul li {
+      font-size: 3rem !important;
+    }
+  }
+
+  section#home {
+    & div {
+      width: 70%;
+      min-width: 800px;
+
+      & h3 {
+        font-size: 2rem !important;
+        text-align: left;
+      }
+      & h1 {
+        font-size: 2rem !important;
+        text-align: left !important;
+        & span {
+          font-size: 4.4rem !important;
+        }
+      }
+      & p {
+        font-size: 2rem !important;
+
+        & strong {
+          font-size: 3.3rem !important;
+        }
+      }
+    }
+  }
+
+  section#about {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    h1 {
+      font-size: 4rem !important;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-size: 2rem !important;
+      margin-bottom: 20px;
+    }
+
+    & p {
+      font-size: 1.4rem !important;
+      width: 100%;
+    }
+
+    & .media_learning {
+      width: 100% !important;
+      margin-left: auto;
+      margin-right: auto;
+
+      & .media_container {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 50px !important;
+
+        & figure {
+          margin-bottom: 30px;
+          & figcaption {
+            font-size: 1.7rem !important;
+          }
+        }
+
+        & fieldset {
+          margin-bottom: 30px;
+          & legend {
+            font-size: 1.7rem !important;
+          }
+          & ul {
+            margin-left: 30px;
+            & li {
+              font-size: 1.5rem !important;
+            }
+          }
+        }
+        & ol {
+          & li {
+            font-size: 1.7rem !important;
+          }
+        }
+      }
+    }
+  }
+}
+*/
+@media screen and (max-width: 1000px) {
+  main {
+    position: absolute;
+    left: 0;
+  }
+
+  main section {
+    padding: 0 !important;
+    margin-left: 20px;
+    width: 100% !important;
+  }
+
+  main section h1 {
+    font-size: 80px !important;
+  }
+
+  header {
+    & img {
+      width: 120px !important;
+      height: 120px !important;
+    }
+    & ul li {
+      font-size: 3rem !important;
+    }
+  }
+
+  section#home {
+    width: 100%;
+    height: 100%;
+
+    & video {
+      width: 100%;
+      height: 100vh !important;
+      object-fit: cover;
+    }
+    & div {
+      width: 70%;
+      min-width: 600px;
+
+      & h3 {
+        font-size: 3.1rem !important;
+        text-align: left;
+      }
+      & h1 {
+        font-size: 3rem !important;
+        text-align: left !important;
+        & span {
+          font-size: 5rem !important;
+        }
+      }
+      & p {
+        font-size: 2.4rem !important;
+
+        & strong {
+          font-size: 3.3rem !important;
+        }
+      }
+    }
+  }
+
+  section#about {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    h2 {
+      font-size: 3rem !important;
+      margin-bottom: 20px;
+    }
+
+    & p {
+      font-size: 2.2rem !important;
+      width: 100%;
+    }
+
+    & .media_learning {
+      width: 100% !important;
+      margin-left: auto;
+      margin-right: auto;
+
+      & .media_container {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr) !important;
+        gap: 50px !important;
+
+        & figure {
+          margin-bottom: 30px;
+          & figcaption {
+            font-size: 2.2rem !important;
+          }
+        }
+
+        & fieldset {
+          margin-bottom: 30px;
+          & legend {
+            font-size: 2.5rem !important;
+          }
+          & ul {
+            margin-left: 30px;
+            & li {
+              font-size: 2.2rem !important;
+            }
+          }
+        }
+        & ol {
+          & li {
+            font-size: 2.2rem !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  main {
+    position: absolute;
+    left: 0;
+  }
+
+  main section {
+    padding: 0 !important;
+    margin-left: 20px;
+    width: 100% !important;
+  }
+
+  main section h1 {
+    font-size: 80px !important;
+  }
+
+  header {
+    & img {
+      width: 120px !important;
+      height: 120px !important;
+    }
+    & ul li {
+      font-size: 3rem !important;
+    }
+  }
+
+  section#home {
+    width: 100%;
+    height: 100%;
+
+    & video {
+      width: 100%;
+      height: 100vh !important;
+      object-fit: cover;
+    }
+    & div {
+      width: 70%;
+      min-width: 600px;
+
+      & h3 {
+        font-size: 3.1rem !important;
+        text-align: left;
+      }
+      & h1 {
+        font-size: 3rem !important;
+        text-align: left !important;
+        & span {
+          font-size: 5rem !important;
+        }
+      }
+      & p {
+        font-size: 2.4rem !important;
+
+        & strong {
+          font-size: 3.3rem !important;
+        }
+      }
+    }
+  }
+
+  section#about {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    h2 {
+      font-size: 3rem !important;
+      margin-bottom: 20px;
+    }
+
+    & p {
+      font-size: 2.2rem !important;
+      width: 100%;
+    }
+
+    & .media_learning {
+      width: 100% !important;
+      margin-left: auto;
+      margin-right: auto;
+
+      & .media_container {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr) !important;
+        gap: 50px !important;
+
+        & figure {
+          margin-bottom: 30px;
+          & figcaption {
+            font-size: 2.2rem !important;
+          }
+        }
+
+        & fieldset {
+          margin-bottom: 30px;
+          & legend {
+            font-size: 2.5rem !important;
+          }
+          & ul {
+            margin-left: 30px;
+            & li {
+              font-size: 2.2rem !important;
+            }
+          }
+        }
+        & ol {
+          & li {
+            font-size: 2.2rem !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  main {
+    position: absolute;
+    left: 0;
+  }
+
+  main section {
+    padding: 0 !important;
+    width: 100% !important;
+  }
+
+  main section h1 {
+    font-size: 90px !important;
+  }
+
+  header {
+    & img {
+      width: 100px !important;
+      height: 100px !important;
+    }
+    & ul li {
+      font-size: 2.3rem !important;
+    }
+  }
+
+  section#home {
+    width: 100%;
+    height: 100%;
+
+    & video {
+      width: 100%;
+      height: 100vh !important;
+      object-fit: cover;
+    }
+    & div {
+      width: 70%;
+      min-width: 600px;
+
+      & h3 {
+        font-size: 4rem !important;
+        text-align: left;
+      }
+      & h1 {
+        font-size: 4.5rem !important;
+        text-align: left !important;
+        & span {
+          font-size: 5rem !important;
+        }
+      }
+      & p {
+        font-size: 2.4rem !important;
+
+        & strong {
+          font-size: 3.3rem !important;
+        }
+      }
+    }
+  }
+
+  section#about {
+    padding: 10px !important;
+    margin: 0;
+    width: 100%;
+    h2 {
+      font-size: 4rem !important;
+      margin-bottom: 20px;
+    }
+
+    & p {
+      font-size: 2.9em !important;
+      width: 100% !important;
+      padding: 10px !important;
+    }
+
+    & .media_learning {
+      width: 100% !important;
+      margin-left: auto;
+      margin-right: auto;
+
+      & .media_container {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr) !important;
+        gap: 50px !important;
+
+        & figure {
+          margin-bottom: 30px;
+          & figcaption {
+            font-size: 3rem !important;
+          }
+        }
+
+        & fieldset {
+          margin-bottom: 30px;
+          & legend {
+            font-size: 3.2rem !important;
+          }
+          & ul {
+            margin-left: 30px;
+            & li {
+              font-size: 3rem !important;
+            }
+          }
+        }
+        & ol {
+          & li {
+            font-size: 3rem !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 499px) {
+}
+
+/* ** Media queries for the background control - controls */
+@media screen and (max-width: 700px) and (min-width: 400px) {
+  form {
+    & fieldset {
+      & input {
+        width: 50px !important;
+        height: 50px !important;
+      }
+    }
+  }
+}
