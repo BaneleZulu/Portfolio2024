@@ -1,0 +1,253 @@
+:root {
+  --themeColor: DarkCyan;
+  --clr-style-1: rgb(218, 29, 129);
+  --clr-style-2: rgb(57, 174, 186);
+
+  --clr-body-bg: hsl(0 0% 90%);
+  --clr-nav-bg: hsl(0, 0%, 75%);
+  --clr-card-bg: hsl(0 0% 100%);
+  --clr-text: hsl(0 0% 15%);
+  --clr-heading: hsl(0 0% 25%);
+
+  --text-font-1: "M PLUS 1 Code", monospace;
+  --text-font-2: "Playpen Sans", sans-serif;
+  --heading-size: 3rem;
+  --sub-heading-size: 1rem;
+  --text-size: 1em;
+  --text-size-2: 0.1em;
+}
+
+/* ---===  myProjects SECTION START ===---- */
+section#myProjects {
+  padding: 70px 30px;
+
+  & div.projects-row {
+    margin: 50 0 10px 0px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 35px;
+
+    & .project-item {
+      position: relative;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 20%);
+
+      & img {
+        width: 100%;
+        border-radius: 10px;
+      }
+
+      & .project_info {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: var(--themeColor);
+        padding: 0 5px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        transform: scale(0);
+        transition: 0.4s;
+        border-radius: 10px;
+        visibility: hidden;
+        cursor: pointer;
+        transform-origin: top center;
+
+        & h4 {
+          color: var(--clr-heading);
+          padding-top: 5px;
+          font-size: 1.2em;
+          font-weight: 600;
+        }
+
+        & p {
+          color: var(--clr-text);
+          font-size: 0.9em;
+        }
+
+        & a {
+          /* text-emphasis: none; */
+          display: inline-block;
+          font-size: 15px;
+          width: 45px;
+          height: 45px;
+          background-color: var(--bgColor);
+          border-radius: 50%;
+          line-height: 46px;
+          transition: 0.4s;
+        }
+      }
+    }
+  }
+}
+
+#myProjects .projects-row .project-item:hover .project_info {
+  transform: scale(1);
+  visibility: visible;
+}
+#myProjects .projects-row .project-item .project_info a:hover {
+  background-color: var(--bgColor);
+  color: var(--clr-text);
+}
+
+@media screen and (max-width: 1001px) {
+  section#myProjects {
+    padding: 10px 10px;
+    & h1 {
+      font-size: 4rem !important;
+      margin-bottom: 10px;
+    }
+
+    & div.projects-row {
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 30px;
+      --webkit-width: fit-content;
+
+      & .project_info {
+        padding: 10px !important;
+        h4 {
+          font-size: 2rem !important;
+          margin-top: -10px;
+          & sup {
+            font-size: 1.2rem !important;
+          }
+        }
+        & p {
+          font-size: 1.2rem !important;
+          margin-bottom: -5px;
+          padding: 10px !important;
+          & code {
+            font-size: 1.3rem !important;
+          }
+        }
+        & a {
+          font-size: 30px !important;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  section#myProjects {
+    padding: 10px 10px;
+
+    & h1 {
+      font-size: 7rem !important;
+      margin-bottom: 10px;
+    }
+
+    & div.projects-row {
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: 30px;
+      --webkit-width: fit-content;
+      width: fit-content;
+
+      & .project_info {
+        padding: 10px !important;
+        h4 {
+          font-size: 3rem !important;
+          margin-top: -10px;
+          & sup {
+            font-size: 2.5rem !important;
+          }
+        }
+        & p {
+          font-size: 2rem !important;
+          margin-bottom: -5px;
+          padding: 10px !important;
+          & code {
+            font-size: 2.5rem !important;
+          }
+        }
+        & a {
+          font-size: 40px !important;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  section#myProjects {
+    padding: 10px 10px;
+
+    & h1 {
+      font-size: 7rem !important;
+      margin-bottom: 10px;
+    }
+
+    & div.projects-row {
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: 30px;
+
+      & .project_info {
+        padding: 10px;
+        h4 {
+          font-size: 60px !important;
+          margin-top: -10px;
+
+          & sup {
+            font-size: 30px !important;
+          }
+        }
+        & p {
+          font-size: 33px !important;
+          margin-bottom: -5px;
+          & code {
+            font-size: 30px !important;
+          }
+        }
+        & a {
+          font-size: 40px !important;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  section#myProjects {
+    padding: 10px 10px;
+
+    & h1 {
+      font-size: 7rem !important;
+      margin-bottom: 20px !important;
+    }
+
+    & div.projects-row {
+      padding: 10px !important;
+      & .project-item {
+        height: 800px !important;
+      }
+      & .project_info {
+        padding: 0px !important;
+        h4 {
+          font-size: 3.5rem !important;
+          margin-top: -20px !important;
+
+          & sup {
+            font-size: 2rem !important;
+          }
+        }
+        & p {
+          font-size: 2.7rem !important;
+          margin-bottom: -7px;
+          padding: 7px !important;
+          & code {
+            font-size: 2.5rem !important;
+          }
+        }
+        & a {
+          font-size: 4rem !important;
+        }
+      }
+    }
+  }
+}
