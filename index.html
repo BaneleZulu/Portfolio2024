@@ -1147,12 +1147,12 @@
 
           <!-- LEFT COLUMN -->
           <div class="contact-right">
-            <form id="myForm">
-              <input type="text" name="Name" id="name" placeholder="Your Name">
-              <input type="email" name="Email" id="email" placeholder="yourEmail@gmail.com">
-              <input type="text" name="subject" id="subject" placeholder="Subject">
-              <textarea name="Message" id="msg" rows="10" placeholder="Your message"></textarea>
-              <input type="submit" value="Send Message">
+            <form id="myForm" action="https://formspree.io/f/mqkrwkpz" method="POST">
+                <input type="text" name="name" id="name" placeholder="Your Name">
+                <input type="email" name="email" id="email" placeholder="yourEmail@gmail.com">
+                <input type="text" name="subject" id="subject" placeholder="Subject">
+                <textarea name="message" id="msg" rows="10" placeholder="Your message"></textarea>
+                <input type="submit" value="Send Message">
             </form>
             <span id="message"></span>
           </div>
